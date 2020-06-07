@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/websystems
+    username: postgres
+    # TODO: change password
+    password: password
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+        hbm2ddl:
+          create_namespaces: true
+        temp:
+          use_jdbc_metadata_defaults: false
+    javax:
+      persistence:
+        schema-generation:
+          create-database-schemas: true
