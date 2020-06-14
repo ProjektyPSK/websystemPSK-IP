@@ -3,5 +3,6 @@ spring:
     active: test
   mvc:
     view:
+      prefix: /WEB-INF/views/
       suffix: .jsp
-      prefix: /jsp/
+      static-path-pattern: /resources/**

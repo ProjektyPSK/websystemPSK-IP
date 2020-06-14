@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.Set;
 
 @Data
 @Entity
@@ -15,7 +16,7 @@ import java.time.LocalDate;
 public class Employee {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long idEmployee;
 
     private String login;
@@ -40,6 +41,9 @@ public class Employee {
 
     @OneToOne
     private Contact contact;
+
+    @ManyToMany
+    private Set<Role> roles;
 
 
 }

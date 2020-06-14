@@ -13,7 +13,7 @@ import javax.persistence.*;
 public class Client {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long idClient;
 
     private String login;

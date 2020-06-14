@@ -15,7 +15,7 @@ import java.time.LocalDate;
 public class Orders {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long idOrder;
 
     @ManyToOne

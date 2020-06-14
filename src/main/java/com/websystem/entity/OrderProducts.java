@@ -10,7 +10,7 @@ import javax.persistence.*;
 public class OrderProducts {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long idOrderProducts;
 
     @ManyToOne

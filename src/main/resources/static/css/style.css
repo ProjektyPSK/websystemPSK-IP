@@ -1,0 +1,54 @@
+body {
+    background-color: #2781C2;
+    margin: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.wrapper {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 300 300 300 300;
+    background-color: #195580;
+	color: rgb(255, 255, 255);
+	margin-top: 100px;
+	margin-bottom: 100px;
+	margin-left: 500px;
+	margin-right: 500px;
+}
+
+.box {
+    background-color: #0D2B40;
+    gap: 20px;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.box .box {
+    background-color: rgba(195, 243, 195, 0.829);
+    color: rgb(255, 255, 255);
+}
+
+.a {
+    grid-column: 1;
+    grid-row: 1;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 25pt;
+    text-align: center;
+}
+
+.b {
+    grid-column: 1;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-size: 14pt;
+}
+
+.b .login-container {
+    text-align: center;
+    align-content: center;
+}
