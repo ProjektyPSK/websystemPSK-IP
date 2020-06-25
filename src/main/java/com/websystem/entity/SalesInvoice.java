@@ -16,9 +16,9 @@ public class SalesInvoice {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long idSalesInvoice;
+    private Long idSalesInvoice;
 
-    private long idClient;
+    private Long idClient;
 
     private String numberSalesInvoice;
 

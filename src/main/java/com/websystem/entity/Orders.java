@@ -16,13 +16,13 @@ public class Orders {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long idOrder;
+    private Long idOrder;
 
     @ManyToOne
     private Client client;
 
     @OneToOne
-    private Employee employee;
+    private User user;
 
     private LocalDate dateOfOrder;
 

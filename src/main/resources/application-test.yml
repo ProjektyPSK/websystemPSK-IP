@@ -15,4 +15,4 @@ spring:
         web-allow-others: false
 
 server:
-  port: 8084
+  port: 8085

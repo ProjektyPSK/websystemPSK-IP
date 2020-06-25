@@ -15,7 +15,7 @@ public class Contact {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long idContact;
+    private Long idContact;
 
     private String phoneNumber;
 

@@ -6,3 +6,8 @@ spring:
       prefix: /WEB-INF/views/
       suffix: .jsp
       static-path-pattern: /resources/**
+  factory:
+    anntotation:
+      Autowired: true
+  main:
+    allow-bean-definition-overriding: true

@@ -1,4 +1,4 @@
-package com.websystem.authentication;
+package com.websystem.services;
 
 public interface SecurityService {
 

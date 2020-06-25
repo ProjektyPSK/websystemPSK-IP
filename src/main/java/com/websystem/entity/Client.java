@@ -3,6 +3,7 @@ package com.websystem.entity;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 
 @Data
 @Entity
@@ -14,10 +15,12 @@ public class Client {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long idClient;
+    private Long idClient;
 
+    @NotEmpty
     private String login;
 
+    @NotEmpty
     private String pass;
 
     private String company;
@@ -28,9 +31,9 @@ public class Client {
 
     private String typeOfCustomer;
 
-    @OneToOne
+    @ManyToOne
     private Address address;
 
-    @OneToOne
+    @ManyToOne
     private Contact contact;
 }
