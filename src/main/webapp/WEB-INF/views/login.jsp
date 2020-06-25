@@ -1,23 +1,29 @@
-<div class="panel-body">
-    <form action="doLogin" method="post">
-        <fieldset>
-            <legend>Please sign in</legend>
-            <c:if test="${not empty error}">
-                <div class="alert alert-danger">
-                    <spring:message code="AbstractUserDetailsAuthenticationProvider.badCredentials"/>
-                    <br/>
-                </div>
-            </c:if>
-            <div class="form-group">
-                <input class="form:input-large" placeholder="User Name"
-                       name='username' type="text">
-            </div>
-            <div class="form-group">
-                <input class=" form:input-large" placeholder="Password"
-                       name='password' type="password" value="">
-            </div>
-            <input class="btn" type="submit"
-                   value="Login">
-        </fieldset>
-    </form>
+<%@page contentType="text/html" pageEncoding="UTF-8" language="java"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My App</title>
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+<div class="wrapper">
+    <div class="box a">Web System</div>
+    <div class="box b">
+        <div class="login-container">
+            <form action="/login" method="POST">
+                <input type="text" placeholder="username" name="username"><br>
+                <input type="password" placeholder="Password" name="password"><br>
+                <input type="submit" name="submit"/>
+                <button type="reset">Clear</button>
+            </form>
+        </div>
+    </div>
 </div>
+</body>
+
+</html>
