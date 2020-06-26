@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>My App</title>
+    <title>WEB SYSTEM</title>
     <link href="/css/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -15,11 +15,16 @@
     <div class="box a">Web System</div>
     <div class="box b">
         <div class="login-container">
-            <form action="/login" method="POST">
+            <form action="/welcome" method="POST">
                 <input type="text" placeholder="username" name="username"><br>
                 <input type="password" placeholder="Password" name="password"><br>
                 <input type="submit" name="submit"/>
                 <button type="reset">Clear</button>
+<%--                <a href="/registration" methods="post">Sign In</a>--%>
+            </form>
+
+            <form action="/registration" method="post">
+                <input type="submit" value="Sign In"/>
             </form>
         </div>
     </div>

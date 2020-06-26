@@ -15,7 +15,7 @@
     <div class="box a">Web System Registration</div>
     <div class="box b">
         <div class="login-container">
-            <form action="/admin/registration" method="POST">
+            <form action="/registration" method="post">
                 <input type="text" placeholder="Name" name="name"><br>
                 <input type="text" placeholder="Last name" name="lastname"><br>
                 <input type="text" placeholder="User name" name="username"><br>
@@ -34,12 +34,6 @@
                 <input type="text" placeholder="House number" name="housenumber"><br>
                 <input type="text" placeholder="Apartment number" name="apartmentnumber"><br><br><br>
                 <a>Role</a><br><br>
-                <input type="radio" id="Admin" placeholder="checkbox" name="role" value="ADMIN">
-                <label for="Admin">Admin</label>
-                <input type="radio" id="Trader" placeholder="checkbox" name="role" value="TRADER">
-                <label for="Trader">Trader</label>
-                <input type="radio" id="Seller" placeholder="checkbox" name="role" value="SELLER">
-                <label for="Seller">Seller</label>
                 <input type="radio" id="User" placeholder="checkbox" name="role" value="USER">
                 <label for="User">User</label><br><br><br>
                 <input type="submit" name="submit"/>
