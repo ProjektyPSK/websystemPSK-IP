@@ -9,7 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 @RestController
 public class UserController {
 
-    @RequestMapping(value = "/welcome", method = RequestMethod.POST)
+    @RequestMapping(value = "/user/welcome", method = {RequestMethod.POST})
     public ModelAndView welcome() {
         System.out.println("welcome");;
         return new ModelAndView("welcome");

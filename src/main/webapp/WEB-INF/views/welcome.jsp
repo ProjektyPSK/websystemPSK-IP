@@ -15,7 +15,7 @@
     <div class="box a">Web System</div>
     <div class="box b">
         <div class="login-container">
-            <form action="welcome.jsp" method="GET">
+            <form action="/welcome" method="GET">
 
             </form>
         </div>

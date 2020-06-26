@@ -15,7 +15,7 @@
     <div class="box a">Web System</div>
     <div class="box b">
         <div class="login-container">
-            <form action="/welcome" method="POST">
+            <form action="/user/welcome" method="POST">
                 <input type="text" placeholder="username" name="username"><br>
                 <input type="password" placeholder="Password" name="password"><br>
                 <input type="submit" name="submit"/>

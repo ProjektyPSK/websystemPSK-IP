@@ -38,15 +38,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
                 // allow anonymous resource requests
                 .antMatchers(
-                        HttpMethod.GET,
                         "/",
                         "/**/*.jsp",
                         "/**/*.css",
                         "/**/*.js",
                         "/**"
                 ).permitAll()
-                .antMatchers("/**").permitAll()
-                .anyRequest().authenticated();
+                .antMatchers("/user/*").hasRole("USER")
+//                .antMatchers("/user/**").hasRole("USER")
+                .antMatchers("/admin/*").hasRole("ADMIN")
+                .anyRequest().fullyAuthenticated();
 
         // disable page caching
         http.headers().cacheControl();
