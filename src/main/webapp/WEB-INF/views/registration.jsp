@@ -12,37 +12,31 @@
 
 <body>
 <div class="wrapper">
-    <div class="box a">Web System Registration</div>
+    <div class="box a">Web System Administrator Registration</div>
     <div class="box b">
         <div class="login-container">
-            <form action="/admin/registration" method="POST">
+            <form modelAttribute="user" action="registrationProcess" method="POST">
                 <input type="text" placeholder="Name" name="name"><br>
-                <input type="text" placeholder="Last name" name="lastname"><br>
+                <input type="text" placeholder="Surname" name="surname"><br>
                 <input type="text" placeholder="User name" name="username"><br>
                 <input type="password" placeholder="Password" name="password"><br><br><br>
                 <a>Contact</a><br><br>
-                <input type="number" placeholder="Phone number" name="phonenumber"><br>
-                <input type="text" placeholder="Fax number" name="faxnumber"><br>
-                <input type="email" placeholder="e-mail" name="email"><br>
-                <input type="url" placeholder="My site" name="site"><br><br><br>
+                <input type="tel" placeholder="Phone number" name="phoneNumber"><br>
+                <input type="text" placeholder="Fax number" name="faxNumber"><br>
+                <input type="email" placeholder="E-mail" name="email"><br>
+                <input type="url" placeholder="My site" name="mySite"><br><br><br>
                 <a>Address</a><br><br>
                 <input type="text" placeholder="City" name="city"><br>
-                <input type="text" placeholder="province" name="province"><br>
+                <input type="text" placeholder="Province" name="province"><br>
                 <input type="text" placeholder="Country" name="country"><br>
-                <input type="text" placeholder="Post code" name="postcode"><br>
+                <input type="text" placeholder="Post code" name="postCode"><br>
                 <input type="text" placeholder="Street" name="street"><br>
-                <input type="text" placeholder="House number" name="housenumber"><br>
-                <input type="text" placeholder="Apartment number" name="apartmentnumber"><br><br><br>
+                <input type="text" placeholder="House number" name="houseNumber"><br>
+                <input type="text" placeholder="Apartment number" name="apartmentNumber"><br><br><br>
                 <a>Role</a><br><br>
-                <input type="radio" id="Admin" placeholder="checkbox" name="role" value="ADMIN">
-                <label for="Admin">Admin</label>
-                <input type="radio" id="Trader" placeholder="checkbox" name="role" value="TRADER">
-                <label for="Trader">Trader</label>
-                <input type="radio" id="Seller" placeholder="checkbox" name="role" value="SELLER">
-                <label for="Seller">Seller</label>
-                <input type="radio" id="User" placeholder="checkbox" name="role" value="USER">
-                <label for="User">User</label><br><br><br>
-                <input type="submit" name="submit"/>
+                <input type="radio" id="User" placeholder="checkbox" name="role" value="ADMIN" checked="checked">
+                <label for="User">ADMIN</label><br><br><br>
+                <input type="submit" name="Registration"/>
                 <button type="reset">Clear</button>
 
             </form>

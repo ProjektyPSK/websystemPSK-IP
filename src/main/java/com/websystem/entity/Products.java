@@ -1,19 +1,25 @@
 package com.websystem.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-@Data
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
 @Table(schema = "websystem")
 public class Products {
+
+    public Products(Long idProduct, String nameProduct, String type, String version, String description, BigDecimal price, String productCode) {
+        this.idProduct = idProduct;
+        this.nameProduct = nameProduct;
+        this.type = type;
+        this.version = version;
+        this.description = description;
+        this.price = price;
+        this.productCode = productCode;
+    }
+
+    public Products() {
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -31,11 +37,68 @@ public class Products {
 
     private String productCode;
 
-    private LocalDate dateOfPurchase;
 
-    private LocalDate saleDate;
 
-    private boolean isSale;
+    public Long getIdProduct() {
+        return idProduct;
+    }
+
+    public void setIdProduct(Long idProduct) {
+        this.idProduct = idProduct;
+    }
+
+    public String getNameProduct() {
+        return nameProduct;
+    }
+
+    public void setNameProduct(String nameProduct) {
+        this.nameProduct = nameProduct;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getVersion() {
+        return version;
+    }
+
+    public void setVersion(String version) {
+        this.version = version;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
+
+    public String getProductCode() {
+        return productCode;
+    }
+
+    public void setProductCode(String productCode) {
+        this.productCode = productCode;
+    }
+
+
+
+
+
 
 
 }

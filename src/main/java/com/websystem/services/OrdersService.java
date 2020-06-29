@@ -6,18 +6,18 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
-@Service("OrdersService")
+@Service
 public class OrdersService {
 
     private OrdersRepository ordersRepository;
 
-    public Orders save(Orders orders){
+    public Orders save(Orders orders) {
         return ordersRepository.save(orders);
     }
-    public ArrayList<Orders> getCustomers(){
+
+    public ArrayList<Orders> getCustomers() {
         return (ArrayList<Orders>) ordersRepository.findAll();
     }
-
 
 
 }

@@ -11,3 +11,17 @@ spring:
       Autowired: true
   main:
     allow-bean-definition-overriding: true
+  mail:
+    host: smtp.wp.pl
+    port: 465
+    username: pocztex09876@wp.pl
+    password: QazWsx0987!
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+          connectiontimeout: 5000
+          timeout: 3000
+          writetimeout: 5000

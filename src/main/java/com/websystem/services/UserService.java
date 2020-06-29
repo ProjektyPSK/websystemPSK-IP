@@ -1,29 +1,35 @@
 package com.websystem.services;
 
 import com.websystem.entity.User;
+import com.websystem.model.Login;
 import com.websystem.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+
 @Service
 @Transactional
-public class UserService{
+public class UserService {
 
-    UserRepository userRepository;
+    @Autowired
     PasswordEncoder pass;
+    @Autowired
+    public UserRepository userRepo;
 
-    public UserService(UserRepository userRepository, PasswordEncoder pass) {
-        this.userRepository = userRepository;
-        this.pass = pass;
+    public void addUser(User user) {
+        userRepo.save(user);
     }
 
-    public User save(User user){
+    public User validateUser(Login login) {
+        return userRepo.findByUsername(login.getUsername());
+    }
+
+    public User save(User user) {
         user.setPassword(pass.encode(user.getPassword()));
 
-        userRepository.save(user);
+        userRepo.save(user);
         return user;
     }
-
-
 }

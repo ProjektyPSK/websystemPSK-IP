@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>WEB SYSTEM</title>
-    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <link href="/css/loginstyle.css" rel="stylesheet" type="text/css">
 
 </head>
 
@@ -15,7 +15,8 @@
     <div class="box a">Web System</div>
     <div class="box b">
         <div class="login-container">
-            <form action="/user/welcome" method="POST">
+            <form action="/user/home" method="post">
+<%--                <input type="hidden" name="action" value="sendemailWhenAddNewProduct">--%>
                 <input type="text" placeholder="username" name="username"><br>
                 <input type="password" placeholder="Password" name="password"><br>
                 <input type="submit" name="submit"/>
@@ -23,7 +24,7 @@
 <%--                <a href="/registration" methods="post">Sign In</a>--%>
             </form>
 
-            <form action="/registration" method="post">
+            <form action="/showRegistrationPage" method="post">
                 <input type="submit" value="Sign In"/>
             </form>
         </div>
