@@ -16,7 +16,7 @@
     <div class="box b">
         <div class="login-container">
             <form action="/user/home" method="post">
-<%--                <input type="hidden" name="action" value="sendemailWhenAddNewProduct">--%>
+                <input type="hidden" formaction="sendemailWhenAddNewUser">
                 <input type="text" placeholder="username" name="username"><br>
                 <input type="password" placeholder="Password" name="password"><br>
                 <input type="submit" name="submit"/>

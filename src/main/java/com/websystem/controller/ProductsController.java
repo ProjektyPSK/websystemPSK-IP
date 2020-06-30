@@ -2,6 +2,8 @@ package com.websystem.controller;
 
 import com.websystem.entity.Products;
 import com.websystem.repository.ProductsRepository;
+import com.websystem.services.MailNotifications;
+import com.websystem.services.MailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,6 +18,10 @@ public class ProductsController {
 
     @Autowired
     ProductsRepository productsRepository;
+    @Autowired
+    MailService mailService;
+    @Autowired
+    MailNotifications mailNotifications;
 
     @RequestMapping("/user/showproducts")
     public String showAllProducts(Model model) {
@@ -28,7 +34,11 @@ public class ProductsController {
     @RequestMapping("/productProcess")
     public String addNewProduct(@ModelAttribute("product") Products product, ModelMap model) {
         productsRepository.save(product);
-
+        Thread newProductAdded = new Thread(()->{
+            mailNotifications.sendEmail("Added new Product","New product was added in DB!");
+        }
+        );
+        newProductAdded.start();
         return "addProductSuccess";
     }
 

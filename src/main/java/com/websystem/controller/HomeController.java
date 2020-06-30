@@ -19,9 +19,9 @@ public class HomeController {
         return new ModelAndView("home");
     }
 
-    @RequestMapping("/admin/addProducts")
+    @RequestMapping("/user/addProducts")
     public ModelAndView showAddingNewProductPage(ModelMap model){
             model.addAttribute(new Products());
-        return new ModelAndView("userRegistration");
+        return new ModelAndView("addProduct");
     }
 }
